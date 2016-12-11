@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DemoFormSkuComponent } from './demo-form-sku.component';
+import { DemoFormSkuComponent } from './form-sku.component';
 
 describe('DemoFormSkuComponent', () => {
   let component: DemoFormSkuComponent;

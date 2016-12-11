@@ -4,12 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { DemoFormSkuComponent } from './demo-form-sku/demo-form-sku.component';
+import { FormSkuComponent } from './form-sku/form-sku.component';
+import { FormSkuFormBuilderComponent } from './form-sku-form-builder/form-sku-form-builder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoFormSkuComponent
+    FormSkuComponent,
+    FormSkuFormBuilderComponent
   ],
   imports: [
     BrowserModule,

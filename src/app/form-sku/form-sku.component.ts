@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'demo-form-sku',
-  templateUrl: './demo-form-sku.component.html',
-  styleUrls: ['./demo-form-sku.component.css']
+  selector: 'form-sku',
+  templateUrl: './form-sku.component.html',
+  styleUrls: ['./form-sku.component.css']
 })
-export class DemoFormSkuComponent {
+export class FormSkuComponent {
 
   constructor() { }
 
