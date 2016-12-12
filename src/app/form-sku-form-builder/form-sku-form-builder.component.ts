@@ -1,15 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {FormBuilder, FormGroup, AbstractControl, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-form-sku-form-builder',
+  selector: 'form-sku-form-builder',
   templateUrl: './form-sku-form-builder.component.html',
   styleUrls: ['./form-sku-form-builder.component.css']
 })
-export class FormSkuFormBuilderComponent implements OnInit {
+export class FormSkuFormBuilderComponent {
+  myForm: FormGroup;
+  sku: AbstractControl;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.myForm = fb.group({
+      'sku': ['', Validators.required]
+    });
 
-  ngOnInit() {
+    this.sku = this.myForm.controls['sku'];
   }
 
+  onSubmit(value: string): void {
+    console.log('you submitted value', value);
+  }
 }
