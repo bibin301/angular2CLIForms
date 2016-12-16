@@ -3,9 +3,22 @@
   <form class="ui form"
     [formGroup]="myForm"
     (ngSubmit)="onSubmit(myForm.value)">
-    <div class="field">
+
+    <div class="field" [class.error]="!sku.valid && sku.touched">
       <label for="skuInput">SKU</label>
+      
+      <!-- refers to the form control by [formControl]="myForm.controls['sku']" 
+      instead of the instance variable  -->
       <input type="text" id="skuInput" placeholder="SKU" [formControl]="myForm.controls['sku']">
+
+      <!-- refers to the instance variable sku -->
+      <div *ngIf="!sku.valid" class="ui negative message">SKU is invalid</div>
+      
+      <!-- refers to the instance variable sku -->
+      <div *ngIf="sku.hasError('required')" class="ui negative message">SKU is required</div>
+
+      <div *ngIf="!myForm.valid" class="ui negative message">Form is invalid</div>
+
     </div>
     <button class="ui button" type="submit">Submit</button>
   </form>
