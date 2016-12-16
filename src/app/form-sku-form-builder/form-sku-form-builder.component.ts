@@ -9,10 +9,12 @@ import {FormBuilder, FormGroup, FormControl, AbstractControl, Validators} from '
 export class FormSkuFormBuilderComponent {
   myForm: FormGroup;
   sku: AbstractControl;
+  productName: string;
 
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      'sku': ['', Validators.compose([Validators.required, this.skuValidator])]
+      'sku': ['', Validators.compose([Validators.required, this.skuValidator])],
+      'productName': ['', Validators.required]
     });
 
     this.sku = this.myForm.controls['sku'];
